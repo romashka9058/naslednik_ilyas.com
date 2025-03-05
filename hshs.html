@@ -229,8 +229,8 @@
 
     <div id="musicPrompt">
         <h2>ПОДТВЕРДИТЕ ЧТО ВАМ МИНИМУМ ЛЕТ 12</h2>
-        <p>︎︎︎︎</p>
         <p>Напишите "Мне есть 12 лет" на языке восточнославянской группы, славянской ветви индоевропейской языковой семьи. Который является одним из наиболее распространённым языком мира Восьмым среди всех языков мира по общей численности говорящих и седьмым по численности владеющих им как родным. Число владеющих языком в России составляет 137,5 млн человек. Всего в мире на языке говорят 258,2 млн человек.</p>
+        <p></p>
         <input type="text" id="ageInput" placeholder="Ввод">
         <span id="error-message">Неверно! Попробуйте снова.</span>
         <button onclick="checkAge()">Подтвердить</button>
@@ -265,7 +265,7 @@
         let debt = parseInt(getCookie("debt")) || 0;
 
         document.getElementById("balance").textContent = balance;
-        document.getElementById("debtAmount").textContent = `${debt}`;
+        document.getElementById("debtAmount").textContent = ${debt} тысяч;
 
         function spin() {
             const slots = [...document.getElementsByClassName('slot')];
@@ -293,12 +293,12 @@
 
                 setCookie("balance", balance);
                 balanceElement.textContent = balance;
-                debtElement.textContent = `${debt} тысяч`;
+                debtElement.textContent = ${debt} тысяч;
             }, 1000);
         }
 
         function setCookie(name, value) {
-            document.cookie = `${name}=${value}; path=/; max-age=31536000`;
+            document.cookie = ${name}=${value}; path=/; max-age=31536000;
         }
 
         function getCookie(name) {
